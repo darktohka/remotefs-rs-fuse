@@ -1,0 +1,21 @@
+name: windows
+
+on: [push, pull_request]
+
+env:
+    CARGO_TERM_COLOR: always
+
+jobs:
+    build:
+        runs-on: windows-2019
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Build
+              run: cargo build --all-features
+            - name: Run tests
+              run: cargo test --no-fail-fast
+              env:
+                  RUST_LOG: trace
+            - name: Clippy
+              run: cargo clippy -- -Dwarnings
