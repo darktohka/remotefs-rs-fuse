@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: sudo apt update && sudo apt install -y libssh2-1-dev libssl-dev libfuse-dev pkg-config
+        run: sudo apt update && sudo apt install -y libssh2-1-dev libssl-dev libfuse-dev libsmbclient-dev libsmbclient pkg-config
       - name: Setup containers
         run: docker compose -f "tests/docker-compose.yml" up -d --build
       - uses: dtolnay/rust-toolchain@stable
