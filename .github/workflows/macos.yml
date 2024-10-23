@@ -11,8 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: brew update && brew install macfuse samba
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
