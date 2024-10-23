@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: sudo apt update && sudo apt install -y libssh2-1-dev libssl-dev libfuse-dev libsmbclient-dev libsmbclient pkg-config
       - name: Setup fuse
-        run: echo "user_allow_other" >> /etc/fuse.conf
+        run: sudo echo "user_allow_other" >> /etc/fuse.conf
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
