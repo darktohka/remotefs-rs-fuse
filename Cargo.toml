@@ -6,6 +6,7 @@ resolver = "2"
 authors = ["Christian Visintin <christian.visintin@veeso.dev>"]
 categories = ["network-programming"]
 edition = "2021"
+rust-version = "1.75"
 include = ["src/**/*", "LICENSE", "README.md", "CHANGELOG.md"]
 keywords = ["remote-fs", "fuse-driver", "fuse"]
 license = "MIT"
