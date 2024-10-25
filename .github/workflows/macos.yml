@@ -11,6 +11,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: install dependencies
+        run: |
+          brew install macfuse
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
