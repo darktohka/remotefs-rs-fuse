@@ -20,6 +20,6 @@ jobs:
       - name: Clippy
         run: cargo clippy -- -Dwarnings
       - name: Run tests
-        run: cargo test --no-fail-fast --features integration-tests
+        run: cargo test --no-fail-fast
         env:
           RUST_LOG: trace
